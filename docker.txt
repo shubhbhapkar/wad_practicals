@@ -1,0 +1,13 @@
+FROM node.apline
+COPY . /dockershu
+CMD node /dockershu/sss.js
+
+mkdir t6
+cd t6
+git --version
+git init
+git add .
+git status
+git add remote origin "link of the github repository"
+commit -m "first commit"
+git push -u origin master

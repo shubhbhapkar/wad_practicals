@@ -1,0 +1,37 @@
+html code for angular
+<h1>{{title}}</h1>
+ <input type="text" #name placeholder="enter your name" name="Name"><br>
+ <input type="text" #address placeholder="enter your address" name="Address"><br>
+ <button (click)="getValue(name.value,address.value)">REGISTER</button>
+
+ <H1>YOUR REGISTERED DATA</H1>
+ <P>Name:{{displayname}}</P>
+  <P>Address:{{displayaddress}}</P>
+
+ts code for angular
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Registration form';
+  displayname='';
+  displayaddress='';
+
+  getValue(name:string, address:string){
+    this.displayname=name;
+    this.displayaddress=address;
+
+  }
+}
+commands for the angularno
+node --version
+npm --version
+npm install -g @angular/cli@latest
+ng version
+ng new nav
+yes
+ng serve -o
